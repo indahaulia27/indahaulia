@@ -1,0 +1,412 @@
+/* Tampilan dasar tombol cafe */
+.tombol {
+    display: inline-block;
+    background-color: #d94f91;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Efek saat tombol disentuh atau diarahkan */
+.tombol:hover {
+    background-color: #b83275;
+}
+
+/* Susunan tombol */
+.pilihan-cafe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 15px;
+}
+
+/* Ukuran foto pada kartu cafe */
+.gambar {
+    widht: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.gambar img {
+    width: 100%;
+    height: 180%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Susunan empat kotak rekomendasi */
+.daftar-cafe {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Tampilan kartu cafe */
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #f2dfe6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tampilan pada layar kecil */
+@media (max-width: 600px) {
+    .daftar-cafe {
+        grid-template-columns: 1fr;
+    }
+}
+.tombol {
+    display: inline-block;
+    background-color: #d94f91;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px 3px;
+}
+
+.tombol:hover {
+    background-color: #b83275;
+}
+/* Latar belakang jendela menu */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(40, 15, 30, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+/* Kotak menu */
+.menu-kotak {
+    position: relative;
+    background: #fff7fb;
+    width: 100%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.menu-kotak h2 {
+    color: #c43d80;
+    margin-top: 10px;
+}
+
+.menu-tutup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: #d94f91;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Susunan gambar dan nama minuman */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 12px;
+    box-shadow: 0 3px 10px #00000012;
+}
+
+.menu-item img {
+    display: block;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    color: #713653;
+    font-size: 16px;
+    margin: 12px 5px 5px;
+}
+
+.menu-item p {
+    color: #c43d80;
+    font-size: 14px;
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-kotak {
+        padding: 18px 12px;
+    }
+}
+.daftar-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.menu-item {
+    background: #fff0f6;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.menu-item h3 {
+    margin-top: 10px;
+    color: #9b3673;
+}
+* Tampilan dasar tombol cafe */
+.tombol {
+    display: inline-block;
+    background-color: #d94f91;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Efek saat tombol disentuh atau diarahkan */
+.tombol:hover {
+    background-color: #b83275;
+}
+
+/* Susunan tombol */
+.pilihan-cafe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 15px;
+}
+
+/* Ukuran foto pada kartu cafe */
+.gambar {
+    height: 180px;
+    overflow: hidden;
+}
+
+.gambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Susunan empat kotak rekomendasi */
+.daftar-cafe {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Tampilan kartu cafe */
+.card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #f2dfe6;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Tampilan pada layar kecil */
+@media (max-width: 600px) {
+    .daftar-cafe {
+        grid-template-columns: 1fr;
+    }
+}
+.tombol {
+    display: inline-block;
+    background-color: #d94f91;
+    color: white;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px 3px;
+}
+
+.tombol:hover {
+    background-color: #b83275;
+}
+/* Latar belakang jendela menu */
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(40, 15, 30, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+/* Kotak menu */
+.menu-kotak {
+    position: relative;
+    background: #fff7fb;
+    width: 100%;
+    max-width: 800px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.menu-kotak h2 {
+    color: #c43d80;
+    margin-top: 10px;
+}
+
+.menu-tutup {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: #d94f91;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Susunan gambar dan nama minuman */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    padding-bottom: 12px;
+    box-shadow: 0 3px 10px #00000012;
+}
+
+.menu-item img {
+    display: block;
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.menu-item h3 {
+    color: #713653;
+    font-size: 16px;
+    margin: 12px 5px 5px;
+}
+
+.menu-item p {
+    color: #c43d80;
+    font-size: 14px;
+    margin: 5px;
+}
+
+@media (max-width: 600px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-kotak {
+        padding: 18px 12px;
+    }
+}
+.daftar-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.menu-item {
+    background: #fff0f6;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.menu-item h3 {
+    margin-top: 10px;
+    color: #9b3673;
+}
+/* Ukuran sampul foto cafe */
+.card .gambar {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card .gambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+.cafe-maio {
+    margin-left: auto;
+    margin-right: auto;
+}

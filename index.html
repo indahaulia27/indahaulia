@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+    <link rel="stylesheet" href="style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekomendasi Cafe di Majene</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #cc6889;
+            color: #c4b8be;
+        }
+
+        header {
+            background: linear-gradient(135deg, #bd4360, #d16283);
+            text-align: center;
+            padding: 45px 20px;
+        }
+
+        header h1 {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+
+        header p {
+            line-height: 1.7;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 30px 20px;
+        }
+
+        .judul {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .daftar-cafe {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit, minmax(220px, 1fr)
+            );
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid #f2dfe6;
+            box-shadow: 0 5px 15px #00000010;
+        }
+
+        .gambar {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    display: block;
+    background: #f7dce5;
+}
+
+.gambar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+        .card:nth-child(2) .gambar {
+            background: #e2eadb;
+        }
+
+        .card:nth-child(3) .gambar {
+            background: #eadcf6;
+        }
+
+        .card:nth-child(4) .gambar {
+            background: #f7e7bd;
+        }
+
+        .isi {
+            padding: 18px;
+        }
+
+        .isi h3 {
+            margin-top: 0;
+        }
+
+        .isi p {
+            color: #806d76;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .kategori {
+            color: #955c70;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .tombol {
+            display: block;
+            margin-top: 18px;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            background: #913a6a;
+            color: rgb(240, 240, 240);
+            border-radius: 9px;
+        }
+
+        .tombol:hover {
+            background: #a05c7c;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: #806d76;
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 29px;
+            }
+        }
+        .daftar-menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    background: #fff0f6;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+.menu-item h3 {
+    font-size: 16px;
+    margin: 10px 0 5px;
+    color: #9b3673;
+}
+
+@media (max-width: 500px) {
+    .daftar-menu {
+        grid-template-columns: 1fr;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-konten {
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 85vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.tutup {
+    float: right;
+    border: none;
+    background: #e85b9b;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 2px 12px;
+}
+.card .gambar {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+
+.card .gambar img {
+    width: 100% !important;
+    height: 180px !important;
+    max-width: 100% !important;
+    object-fit: cover;
+    display: block;
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p>KOTA KULINER</p>
+        <h1>Rekomendasi Cafe di Majene</h1>
+        <p>
+            Temukan tempat untuk nongkrong,
+            bersantai, dan berkumpul bersama teman.
+        </p>
+    </header>
+
+    <main>
+        <div class="judul">
+            <h2>Rekomendasi Cafe</h2>
+            <p>Pilih cafe yang ingin kamu kunjungi!</p>
+        </div>
+
+        <section class="daftar-cafe">
+
+            <div class="card">
+                <div class="gambar">
+                    <img src="images/yotta.jpg" alt="kedai yotta majene">
+                    </div>
+                <div class="isi">
+                    <h3>Yotta Majene</h3>
+                    <p>
+                        Pilihan untuk menikmati minuman
+                        kekinian bersama teman.
+                    </p>
+                    <span class="kategori">
+                        Minuman kekinian
+                    </span>
+                    <a class="tombol"
+                       href="https://www.google.com/maps/search/?api=1&query=Yotta+Majene"
+                       target="_blank">
+                        Lihat Lokasi
+                    </a>
+                   <a class="tombol"
+   href="#"
+   onclick="lihatMenu('yotta'); return false;">
+   Lihat Menu
+</a>
+
+<a class="tombol"
+   href="#"
+   onclick="lihatFoto('yotta'); return false;">
+   Foto Cafe
+</a>
+    </div>
+     </div>
+
+           <div class="card">
+    <div class="gambar">
+        <img src="images/olang mesa.jpg" alt="Cafe Olang Mesa">
+    </div>
+
+    <div class="isi">
+        <h3>Olang Mesa</h3>
+
+        <p>
+            Pilihan tempat untuk bersantai
+            dan berkumpul bersama teman.
+        </p>
+
+        <span class="kategori">Tempat bersantai</span>
+
+        <a class="tombol"
+           href="https://www.google.com/maps/search/?api=1&query=Olang+Mesa+Majene"
+           target="_blank">
+            Lihat Lokasi
+        </a>
+
+        <a class="tombol"
+           href="#"
+           onclick="lihatMenu('olang'); return false;">
+            Lihat Menu
+        </a>
+
+        <a class="tombol"
+           href="#"
+           onclick="lihatFoto('olang'); return false;">
+            Foto Cafe
+        </a>
+    </div>
+</div>
+
+          <div class="card cafe-maio">
+    <div class="gambar">
+        <img src="images/maio.jpg" alt="MAIO Coffee & Eatery">
+    </div>
+
+    <div class="isi">
+        <h3>MAIO Coffee &amp; Eatery</h3>
+
+        <p>
+            Pilihan tempat untuk menikmati
+            kopi dan makanan.
+        </p>
+
+        <span class="kategori">
+            Kopi dan makanan
+        </span>
+
+        <a class="tombol"
+           href="https://www.google.com/maps/search/?api=1&query=MAIO+Coffee+Eatery+Majene"
+           target="_blank">
+            Lihat Lokasi
+        </a>
+        <a class="tombol"
+           href="#"
+           onclick="lihatMenu('maio'); return false;">
+            Lihat Menu
+        </a>
+
+        <a class="tombol"
+           href="#"
+           onclick="lihatFoto('maio'); return false;">
+            Foto Cafe
+        </a>
+    </div>
+</div>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Jelajah Cafe Majene |
+            Temukan tempat favoritmu.
+        </p>
+    </footer>
+<div id="modal" class="modal">
+    <div class="modal-konten">
+        <button class="tutup" onclick="tutupMenu()">×</button>
+        <div id="isiModal"></div>
+    </div>
+</div>
+<div id="modal" class="modal">
+    <div class="modal-konten">
+        <button class="tutup" onclick="tutupMenu()">×</button>
+        <div id="isiModal"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+<script src="script.js"></script>
+</html>
